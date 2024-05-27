@@ -1,0 +1,38 @@
+Method:
+	mesh = ./pores.vtk                  #relative path to mesh file
+	output = output                        #relative path of output folder
+	test = pores                 #selected test
+	scheme:
+		correction = 0
+	/
+	frames:
+		dt = 0.00125                                 #frame output interval (zero: every step)
+	/
+	time:
+		dt = 0.0001                              #time step
+		max = 0.00125                             #max time step
+		time = 0                               #current time
+		total = 0.05                            #total time
+	/
+	properties:
+		gravity = 0.0                          #gravity constant
+		rho = 1                                #fluid density
+	/
+	test-params:
+		pores:
+			name = pores                           #test name
+			mu = 100                            #fluid viscosity
+			n = 1                                  #share rate power
+			perm = 0                               #scalar permeability
+			poro = 1                               #porosity
+			pin = 1.0                                #inflow pressure at left side
+			pout = 0                               #outflow pressure at right side
+		/
+	/
+	verbosity:
+		bounds = 0                             #print min:max for pressure and velocity
+		constraint = 0                         #print constraint information
+		div = 1                                #print divergence value after projection
+		solution = 0                           #print linear system solution information
+	/
+/
