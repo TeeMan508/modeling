@@ -6,11 +6,11 @@ Method:
 		correction = 0
 	/
 	frames:
-		dt = 0.00125                                 #frame output interval (zero: every step)
+		dt = 0.0001                                 #frame output interval (zero: every step)
 	/
 	time:
-		dt = 0.0001                              #time step
-		max = 0.00125                             #max time step
+		dt = 0.00001                              #time step
+		max = 0.00001                             #max time step
 		time = 0                               #current time
 		total = 0.05                            #total time
 	/
@@ -21,12 +21,13 @@ Method:
 	test-params:
 		pores:
 			name = pores                           #test name
-			mu = 100                            #fluid viscosity
+			mu = 1                            #fluid viscosity
 			n = 1                                  #share rate power
 			perm = 0                               #scalar permeability
 			poro = 1                               #porosity
 			pin = 1.0                                #inflow pressure at left side
 			pout = 0                               #outflow pressure at right side
+			viscosity = 1
 		/
 	/
 	verbosity:
